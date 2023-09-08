@@ -58,10 +58,10 @@ function ReportsMap(){
       //This checks to see if the markes are within the 4 corners of the map
       const showTickets = tickets.filter(ticket => {
       return(
-        ticket.latitude < bounds?.Va.hi && 
-        ticket.latitude > bounds?.Va.lo && 
-        ticket.longitude < bounds?.Ga.hi && 
-        ticket.longitude > bounds?.Ga.lo
+        ticket.latitude < bounds?.Va && 
+        ticket.latitude > bounds?.Va && 
+        ticket.longitude < bounds?.Ga && 
+        ticket.longitude > bounds?.Ga
       )})
       dispatch({type: 'SET_INBOUNDSMARKERS', payload: showTickets});
       }
